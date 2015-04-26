@@ -412,15 +412,15 @@ public class LocalFilesystem extends Filesystem {
     private boolean isPublicDirectory(String absolutePath) {
         // TODO: should expose a way to scan app's private files (maybe via a flag).
         //if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            for (File f : context.getExternalMediaDirs()) {
-                if (absolutePath.startsWith(f.getAbsolutePath())) {
+            //for (File f : context.getExternalMediaDirs()) {
+                //if (absolutePath.startsWith(f.getAbsolutePath())) {
                     return true;
-                }
-            }
+                //}
+            //}
         //}
 
-        String extPath = Environment.getExternalStorageDirectory().getAbsolutePath();
-        return absolutePath.startsWith(extPath);
+        //String extPath = Environment.getExternalStorageDirectory().getAbsolutePath();
+        //return absolutePath.startsWith(extPath);
     }
 
      /**
